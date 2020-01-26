@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Your Page Title Here :)</title>
+	<meta name="description" content=""/>
+	<meta name="author" content=""/>
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css"/>
+	<link rel="stylesheet" href="stylesheets/skeleton.css"/>
+	<link rel="stylesheet" href="stylesheets/layout.css"/>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+
+	<div class="container">
+		<div class="sixteen columns offset-by-one content" type="header" style="height:45px;background-color:#3F3F3F;">
+			<img id="navLogo" style="float:left; margin:5px 0 0 5px; border:0" src="images/mrt_32_white.png" alt="Techalio logo"/>
+            <div id="headerText" style="margin:10px 0 0 10px; font-size:14pt; color:#fff;float:left">E-Zero</div>
+            <div id="listText" style="width:260px;margin:13px 0 0 10px; font-size:12pt; color:#fff;float:left;display:none;">
+                <span style="float:left">Stations in&nbsp;</span><span style="float:left" id="stateText"></span>
+                <div style="float:right;margin-top:-3px"><input class="ezButton" style="width:100px; padding:5px;" onclick="stateChooser()" type="button" value="Change state" /></div>
+            </div>
+		</div>
+       
+		<div class="eight columns" style="display:none; margin-top:20px" id="chooseState">
+			<h1>Welcome to E-Zero</h1>
+			<p>Here you can find stations in the U.S. and Canada that sell ethanol-free gasoline. To begin, choose your state or province.</p><p><input class="ezButton" onclick="stateChooser()" type="button" value="Choose a state or province" /></p>
+		
+        </div>
+
+	</div><!-- container -->
+
+
+
+	<!-- JS
+	================================================== -->
+	<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+    <script type="text/javascript" src="scripts/sharedfunctions.js"></script>
+    <script type="text/javascript" src="scripts/webfunctions.js"></script>
+    <script type="text/javascript" src="scripts/tabs.js"></script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

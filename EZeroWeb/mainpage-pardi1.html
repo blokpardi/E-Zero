@@ -1,0 +1,52 @@
+﻿    
+    <div class="sixteen columns content header" id="header" type="header">
+        <div id="largeHeader" class="largeHeader"><div style="float:left;margin:10px 0 0 10px;"><img src="images/logo_sm.png" /></div><div style="float:right;margin:20px 10px 0 0;"><a href="http://techalio.com" target="_blank" style="border:0"><img src="images/ta_logo_small.png" /></a></div></div>
+        <div class="navBar">
+            <img id="navLogo" class="navLogo" src="images/mrt_32_white.png" alt="Techalio logo"/>
+            <div id="headerText" style="margin:10px 0 0 10px; font-size:14pt; color:#fff;float:left"></div>
+            <div id="listText" style="margin:13px 0 0 10px; font-size:12pt; color:#fff;float:left;display:none;">
+                <span style="float:left">Stations in&nbsp;</span><span style="float:left" id="stateText"></span>
+             </div>   
+             <div id="headerButtons" style="float:right;margin-top:8px; margin-right:20px;">
+                  <div id="btnState" class="lightButton" style="width:100px; height:22px;" onclick="stateChooser()">Change state</div>
+                  <div id="btnMap" class="lightButton" style="display:none; width:100px; height:22px;" onclick="backScript.pop();closeMapPage();">Back to list</div>
+             </div>
+        </div>
+     </div>
+       
+		<div class="eight columns chooseState" id="chooseState" style="display:none">
+			<h2>Welcome to E-Zero</h2>
+			<p>Here you can find stations in the U.S. and Canada that sell ethanol-free gasoline. To begin, choose your state or province.</p><p><div class="darkButton" id="btnFindState" style="width:230px; height:22px; text-align:center; margin-bottom:15px" onclick="getPosition()">Try and locate my state or province</div><div class="darkButton" style="width:200px; text-align:center; height:22px;" onclick="stateChooser()" >Choose a state or province</div></p>
+        </div>
+
+        <div type="page" class="sixteen columns listPage" id="listPage" style="display:none">
+            <div id="pageContent"></div>
+        </div>
+
+        <div type="page" class="sixteen columns mapPage" id="mapPage" style="display:none">
+            <div style="position:relative; margin-top:10px; margin-bottom:5px">
+                <div id="mName" style="font-weight:bold"></div>
+                <div id="mAddress"></div>
+                <div id="mMapLink"></div>
+            </div>
+            <div id="zeroMap" style="position:relative; height:400px"></div>
+                
+        </div>
+
+        <div id="dataStore" style="display:none"></div>
+
+        <div type="page" id="messagePage" class="sixteen columns messagePage" style="display:none">
+            <div id="mSpan" style="max-width:500px; margin:0 auto; color:#3f3f3f; font-size:12pt">E-Zero</div>
+        </div>
+
+        <div type="page" id="nonetPage" class="sixteen columns nonetPage" style="display:none">
+            <div style="max-width:500px; margin:0 auto; color:#000; font-size:12pt">We're sorry, but E-Zero is unable to connect to the internet for some reason. It's not your fault. <br /> <br /> E-Zero requires a network connection to get station data. Perhaps you are outside your cellphone coverage area or you have airplane mode turned on. If everything looks ok, just try again. <br /><br /><input class="darkButton" style="min-width:100px;" onclick="tryAgain()" type="button" value="Ok" /></div>
+        
+        </div>
+
+        <div id="stateChooser" type="page" class="sixteen columns stateChooser" style="display:none"></div>
+
+        <div id="alphaChooser" type="page" class="sixteen columns alphaChooser" style="display:none"></div>
+
+        
+

@@ -1,0 +1,103 @@
+  
+.stateBlock
+{
+    float:left;
+    width:40px;
+    height:40px;
+    font-weight:normal !important;
+    margin:4px 4px 4px 4px; 
+    text-align:center;
+    line-height:40px;
+    cursor:pointer;
+    border:0 !important;
+    -moz-border-radius:20px !important;
+    -webkit-border-radius:20px !important;
+    -khtml-border-radius:20px !important;
+    border-radius:20px !important;
+    
+}
+
+.ABlock
+{
+   float:left;
+    width:40px;
+    height:40px;
+    font-weight:normal !important;
+    margin:4px 4px 4px 4px; 
+    text-align:center;
+    line-height:40px;
+    cursor:pointer;
+    border:0 !important;
+    -moz-border-radius:20px !important;
+    -webkit-border-radius:20px !important;
+    -khtml-border-radius:20px !important;
+    border-radius:20px !important;
+}
+
+.darkButton
+{
+	color:#fff !important;
+	background-color:#858585 !important;
+	border:0px !important;
+	padding:2px !important;
+	min-height:10px !important;
+	cursor:pointer !important;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -khtml-border-radius:10px;
+
+}
+ 	
+.lightButton
+{
+	color:#fff !important;
+	background-color:transparent !important;
+	border:2px solid #fff !important;
+	padding:2px !important;
+	text-align:center !important;
+	min-height:10px !important;
+	cursor:pointer !important;
+	-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -khtml-border-radius:10px;
+}
+
+.reverseBox                                 { border:2px solid #858585; font-weight:bold;color:#858585;background-color:transparent; -moz-border-radius:20px;   -webkit-border-radius:20px;  -khtml-border-radius:20px;}
+.solidBox                                   { border:2px solid #858585; font-weight:bold;color:#fff;background-color:#858585; -moz-border-radius:20px;   -webkit-border-radius:20px;  -khtml-border-radius:20px;}
+
+ @media only screen and (max-width: 767px) 
+ {
+        .reverseBox                   { border:2px solid #FF0000; font-weight:bold;color:#FF0000;background-color:transparent; -moz-border-radius:20px;   -webkit-border-radius:20px;  -khtml-border-radius:20px;}
+        .solidBox                     { border:2px solid #FF0000; font-weight:bold;color:#fff;background-color:#FF0000; -moz-border-radius:20px;   -webkit-border-radius:20px;  -khtml-border-radius:20px;}
+        .darkButton
+        {
+	        color:#fff !important;
+	        background-color:#ff0000 !important;
+	        border:0px !important;
+	        padding:2px !important;
+	        min-height:10px !important;
+	        cursor:pointer !important;
+	        -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -khtml-border-radius:10px;
+            }
+ 	
+ }
+
+@media only screen and (min-width: 480px) and (max-width: 767px) 
+{
+        .reverseBox                   { border:2px solid #FF0000; font-weight:bold;color:#FF0000;background-color:transparent; -moz-border-radius:20px;   -webkit-border-radius:20px;  -khtml-border-radius:20px}
+        .solidBox                     { border:2px solid #FF0000; font-weight:bold;color:#fff;background-color:#FF0000; -moz-border-radius:20px;   -webkit-border-radius:20px;  -khtml-border-radius:20px }
+        .darkButton
+        {
+	        color:#fff !important;
+	        background-color:#ff0000 !important;
+	        border:0px !important;
+	        padding:2px !important;
+	        min-height:10px !important;
+	        cursor:pointer !important;
+	        -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -khtml-border-radius:10px;
+            }
+}

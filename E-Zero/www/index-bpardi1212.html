@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    
+    <title>E-Zero</title>
+    
+	  <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+            
+      <script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+      <script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+       
+      <script type="text/javascript">
+
+          $(document).ready(function () {
+              
+              document.addEventListener("deviceready", onDeviceReady, false);
+              //document.addEventListener("backbutton", onBackKeyDown, false);
+          });
+
+          function onDeviceReady(e) {
+              navigator.notification.activityStop();
+              try
+                {
+                    var conn = navigator.network.connection.type;
+                    conn = conn.toString();
+                    if (conn != 'none') {
+                        //navigator.activity.activityStart();
+                        //window.location.href('http://localhost:57457/device.html');
+                        window.location.href('http://techalio.com/ezero/device.html');
+                  }
+                  else {
+                      $('#nonetPage').fadeIn('slow');
+                  }
+                }
+               catch(err)
+               {
+                      $('#nonetPage').fadeIn('slow');
+               }
+          }
+
+          function tryAgain() {
+              navigator.notification.activityStart();
+              $('#nonetPage').fadeOut('slow');
+              onDeviceReady();
+          }
+          function checkConnection() {
+              var networkState = navigator.network.connection.type;
+              var states = {};
+              states[Connection.UNKNOWN] = 'Unknown connection';
+              states[Connection.ETHERNET] = 'Ethernet connection';
+              states[Connection.WIFI] = 'WiFi connection';
+              states[Connection.CELL_2G] = 'Cell 2G connection';
+              states[Connection.CELL_3G] = 'Cell 3G connection';
+              states[Connection.CELL_4G] = 'Cell 4G connection';
+              states[Connection.NONE] = 'No network connection';
+              // navigator.notification.alert('Connection type: ' + networkState);
+              return networkState;
+          }
+
+      </script>
+  </head>
+  <body style="background-color:#fff">
+  
+  <div type="page" id="nonetPage" style="background-color:#fff;float:left;min-height:422px;margin:auto; text-align:center;  z-index:150; position:absolute; top:0px;left:0;width:320px; display:none" >
+    <div type="header" style="width:300px; margin-left:10px;height:45px; background-color:#3F3F3F;">
+	    <div style="float:left"><img id="navLogo" style="margin:5px 0 0 5px; border:0" src="images/mrt_32_white.png" alt="Techalio logo"/></div>
+        <div id="headerText" style="margin:10px 0 0 10px; font-size:14pt; color:#fff;float:left">E-Zero</div>
+    </div>
+    <div style="text-align:center; margin:30px auto; width:270px;color:#000; font-size:12pt">We're sorry, but E-Zero is unable to connect to the internet for some reason. It's not your fault. <br /> <br /> E-Zero requires a network connection to get station data. Perhaps you are outside your cellphone coverage area or you have airplane mode turned on. If everything looks ok, just try again. <br /><br /><input class="ezButton" style="min-width:100px;" onclick="tryAgain()" type="button" value="Try again" /></div>
+</div>
+  </body>
+</html>

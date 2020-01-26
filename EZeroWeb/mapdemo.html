@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+<title>Untitled 1</title>
+<script>
+    $.ajaxSetup({
+        timeout: 50000,
+        crossDomain: true,
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(thrownError);
+        }
+    });
+
+//    $.ajax({
+//        url: "http://dev.virtualearth.net/REST/v1/Locations/47.64054,-122.12934?includeEntityTypes=address&key=AnuhfIBvShX9nD_OR6s2oomIor3x2NexZimxQw8eCKnjy96boqq21XTuVMxBKWR4",
+//        contentType: "application/json",
+//        dataType: "jsonp",
+//        jsonp: "jsonp",
+//        success: function (R) {
+//            for (x in R.resourceSets[0].resources) {
+//                alert(R.resourceSets[0].resources[x].address.adminDistrict);
+//            }
+//        }
+    //    });
+
+    function doStuff(data) {
+        alert(data);
+    }
+
+
+//    $.ajax({
+////        url: "http://dev.virtualearth.net/REST/V1/Imagery/Map/Road/47.64054,-122.12934/2?key=AnuhfIBvShX9nD_OR6s2oomIor3x2NexZimxQw8eCKnjy96boqq21XTuVMxBKWR4",
+//        //url: "http://dev.virtualearth.net/REST/V1/Imagery/Map/Road/space%20needle%20seattle?mapLayer=TrafficFlow&key=AnuhfIBvShX9nD_OR6s2oomIor3x2NexZimxQw8eCKnjy96boqq21XTuVMxBKWR4",
+//        url: "http://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.619048,-122.35384/2?mapSize=500,500&pushpin=47.619048,-122.35384&key=AnuhfIBvShX9nD_OR6s2oomIor3x2NexZimxQw8eCKnjy96boqq21XTuVMxBKWR4",
+//        contentType: "application/json",
+//        dataType: "jsonp",
+//        jsonp: "jsonp",
+//        success: function (R) {
+//            doStuff(R);
+//        }
+//    });
+
+</script>
+
+</head>
+
+<body>
+<div style="float:left;width:300px; height:400px; overflow:scroll" id="content">
+    <div style="float:left; top:-50px;left:-100px"><img src="http://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.619048,-122.35384/15?mapSize=500,500&pushpin=47.619048,-122.35384;34&key=AnuhfIBvShX9nD_OR6s2oomIor3x2NexZimxQw8eCKnjy96boqq21XTuVMxBKWR4" /></div>
+</div>
+</body>
+
+</html>

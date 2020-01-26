@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="ftp://ftp.techalio.com/ezero" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FTP" replaceMatchingFiles="True" userName="techalio" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARGy3imYOU0y/J5arS2fDSQAAAAACAAAAAAADZgAAwAAAABAAAABlgt5bzcQHGTt7A4ObLdXyAAAAAASAAACgAAAAEAAAAL79MAYHol3EQ3YltZv5Y08YAAAAcP608DGGVJa8FLLE28c3UIuZbig5gd8lFAAAAPVuWXQ2bmkoTJmJIPIVxWB539EL" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="02/14/2012 21:41:58" />
+    <file relUrl="device.html" publishTime="02/22/2012 22:38:14" />
+    <file relUrl="images/SplashScreenImage.jpg" publishTime="02/18/2012 10:59:41" />
+    <file relUrl="scripts/devicefunctions.js" publishTime="02/24/2012 14:23:06" />
+    <file relUrl="stylesheets/layout.css" publishTime="02/18/2012 19:08:56" />
+    <file relUrl="stylesheets/base.css" publishTime="02/18/2012 23:26:49" />
+    <file relUrl="images/mrt_32_white.png" publishTime="02/11/2012 20:51:58" />
+    <file relUrl="stylesheets/skeleton.css" publishTime="02/21/2012 22:38:16" />
+    <file relUrl="scripts/phonegap-1.4.1.js" publishTime="02/09/2012 21:05:40" />
+    <file relUrl="scripts/phonegap-1.3.0.js" publishTime="02/09/2012 21:05:24" />
+    <file relUrl="scripts/jquery.mobile-1.0.min.js" publishTime="02/09/2012 21:05:24" />
+    <file relUrl="scripts/sharedfunctions.js" publishTime="02/24/2012 16:30:52" />
+    <file relUrl="bin/EZeroWeb.dll" publishTime="02/21/2012 15:42:00" />
+    <file relUrl="imap.html" publishTime="02/21/2012 15:55:47" />
+    <file relUrl="mapdemo.html" publishTime="02/21/2012 14:57:40" />
+    <file relUrl="bin/EZeroWeb.pdb" publishTime="02/21/2012 15:42:00" />
+    <file relUrl="default.html" publishTime="02/22/2012 22:38:13" />
+    <file relUrl="scripts/webfunctions.js" publishTime="02/24/2012 09:53:12" />
+    <file relUrl="scripts/jquery-1.7.1.min.js" publishTime="02/09/2012 21:05:24" />
+    <file relUrl="scripts/tabs.js" publishTime="02/18/2012 19:08:36" />
+    <file relUrl="stylesheets/master.css" publishTime="02/24/2012 16:07:13" />
+    <file relUrl="scripts/jquery.scrollTo-1.4.2-min.js" publishTime="02/15/2012 21:29:54" />
+  </publishProfile>
+</publishData>

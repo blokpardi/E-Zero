@@ -1,0 +1,60 @@
+﻿    
+    <div class="sixteen columns content header" id="header" type="header">
+        <div id="largeHeader" class="largeHeader"><div class="largeHeaderLogo"><img class="largeHeaderLogoImg" src="images/logo_sm.png" /></div><div class="largeHeaderTalogo"><a href="http://techalio.com" target="_blank" style="border:0"><img class="taLogoSmall" src="images/ta_logo_small.png" /></a></div></div>
+        <div class="navBar">
+            <img id="navLogo" onclick='showAbout()' class="navLogo" src="images/mrt_32_white.png" alt="Techalio logo"/>
+            <div id="headerText"></div>
+            <div id="listText">
+                <span style="float:left">Stations in&nbsp;</span><span style="float:left" id="stateText"></span>
+             </div>   
+             <div id="headerButtons" style="float:right;margin-top:8px; margin-right:20px;">
+                  <div id="btnState" class="lightButton" style="width:100px; height:22px;" onclick="stateChooser()">Change state</div>
+                  <div id="btnMap" class="lightButton" style="display:none; width:100px; height:22px;" onclick="backScript.pop();closeMapPage();">Back to list</div>
+             </div>
+        </div>
+     </div>
+     <div class="container">
+		<div class="eight columns chooseState" id="chooseState" style="display:none">
+			<h2>Welcome to E-Zero</h2>
+			<p>Here you can find stations in the U.S. and Canada that sell ethanol-free gasoline. To begin, choose your state or province.</p><p><div class="darkButton locateButton" id="btnFindState"  onclick="getPosition()">Try and locate my state or province</div><div class="darkButton chooseButton" onclick="stateChooser()" >Choose a state or province</div></p>
+        </div>
+
+        <div type="page" class="sixteen columns listPage" id="listPage" style="display:none">
+            <div id="pageContent"></div>
+        </div>
+
+        <div type="page" class="sixteen columns mapPage" id="mapPage" style="display:none">
+            <div style="position:relative; margin-top:10px; margin-bottom:5px">
+                <div id="mName"></div>
+                <div id="mAddress"></div>
+                <div id="mMapLink"></div>
+            </div>
+            <div id="zeroMap"></div>
+                
+        </div>
+
+        <div id="dataStore" style="display:none"></div>
+
+        <div type="page" id="messagePage" class="sixteen columns messagePage" style="display:none">
+            <div id="mSpan" style="max-width:500px; margin:0 auto; color:#3f3f3f; font-size:12pt">E-Zero</div>
+        </div>
+
+        <div type="page" id="nonetPage" class="sixteen columns nonetPage" style="display:none">
+            <div class="nonetText">We're sorry, but E-Zero is unable to get station data for some reason. It's not your fault. <br /> <br /> E-Zero requires a network connection to get station data. Perhaps you are outside your network coverage area or you have your network turned off. If everything looks ok, just try again. <br /><br /><input class="darkButton nonetButton" onclick="tryAgain()" type="button" value="Ok" /></div>
+        
+        </div>
+
+        <div id="stateChooser" type="page" class="sixteen columns stateChooser" style="display:none"></div>
+
+        <div id="alphaChooser" type="page" class="sixteen columns alphaChooser" style="display:none"></div>
+
+        <div type="page" id="about" class="sixteen columns nonetPage" style="z-index:300;display:none">
+            <div style="max-width:500px; margin:0 auto; color:#000; font-size:10pt">
+            <p><span style='font-size:20pt;font-weight:bold'>E-Zero by Techalio</span></p>
+            <p><span style='font-size:12pt;font-weight:bold'>Data provided by <a href='http://pure-gas.org/index.jsp'>Pure-gas.org</a></span></p>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>
+            <p><div class="darkButton" id="btnClose" style="float:none;width:75px; height:22px; text-align:center; margin:0px auto 15px auto" onclick="onBackKeyDown()">Close</div></p>
+            </div>
+            
+        </div>
+       </div>

@@ -1,0 +1,200 @@
+body {
+    background-image: url('../images/Bigstock_25739870.jpg');
+    background-attachment: fixed;
+    background-repeat: repeat;
+}  
+.stateBlock
+{
+    float:left;
+    width:55px;
+    height:55px;
+    font-weight:normal !important;
+    margin:4px 4px 4px 4px; 
+    padding-left:7px;
+    text-align:left;
+    line-height:80px;
+    cursor:pointer;
+}
+
+.ABlock
+{
+    float:left;
+    width:55px;
+    height:55px;
+    font-weight:normal !important;
+    margin:4px 4px 4px 4px; 
+    text-align:left;
+    padding-left:7px;
+    line-height:80px;
+    cursor:pointer;
+}
+
+.Aactive
+{
+    color:#fff !important;
+}
+
+.Ainactive
+{
+    color:#AFAFAF !important;
+    background-color:#808080 !important;
+    cursor:default !important;
+}
+
+.darkButton
+{
+	color:#fff !important;
+	background-color:#858585 !important;
+	border:0px !important;
+	padding:2px !important;
+	min-height:10px !important;
+	cursor:pointer !important;
+}
+ 	
+.lightButton
+{
+	color:#fff !important;
+	background-color:transparent !important;
+	border:2px solid #fff !important;
+	padding:2px !important;
+	text-align:center !important;
+	min-height:10px !important;
+	cursor:pointer !important;
+}
+
+.adBox                                      { display:none; }
+.mainColor									{ background-color: #858585; }
+.reverseBox                                 { border:2px solid #858585; font-weight:bold;color:#858585;background-color:transparent;}
+.solidBox                                   { border:2px solid #fff; font-weight:bold;color:#fff;background-color:#858585;}
+.sepBorder									{ border-bottom:1px solid #858585; }
+
+.largeHeader
+{
+    display: block;
+    background-position: left top;
+    float: left;
+    width: 100%;
+    height: 60px;
+    background-image: url('../images/site_header_top.jpg');
+    background-repeat: repeat-x;
+    background-attachment: inherit;
+    overflow: hidden;
+}
+
+.header						  { width:100% !important;left:0px; margin-left:0px !important; float:left; position:fixed; z-index:500; }
+
+.navBar                       { width:100% !important;left:0px; margin-left:0px !important; height:45px;background-color:#3F3F3F;float:left; }
+
+.navLogo                      { display:none; }
+
+#headerText:after             { content: ""; }
+
+.chooseState                  { float:left; margin-top:110px; }
+
+.listPage                     { margin-top:106px; }
+
+.mapPage                      { position:absolute; top:106px;left:0; z-index:200; background-color:#ffffff; }
+
+.messagePage                  { text-align:center; float:left;position:absolute; padding-top:50px; top:106px;left:0; z-index:250; background-color:White; min-height:480px; }
+
+.nonetPage                    { text-align:center; float:left;position:absolute; padding-top:50px; top:106px;left:0; z-index:150; background-color:White; min-height:480px; }
+
+.stateChooser                 { position:absolute; top:106px;left:0; z-index:200; background-color:#ffffff; padding:5px; min-height:422px; }
+
+.alphaChooser                 { position:absolute; top:106px;left:0; z-index:200; background-color:#ffffff; padding:5px; min-height:422px; }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) 
+{
+    .brandTag									{ display:none; }
+}
+
+
+ @media only screen and (max-width: 767px) 
+ {
+        .adBox                        { display:block; }
+        .mainColor					  { background-color: #FF0000; }
+        .reverseBox                   { border:2px solid #FF0000; font-weight:bold;color:#FF0000;background-color:transparent;}
+        .solidBox                     { border:2px solid #fff; font-weight:bold;color:#fff;background-color:#FF0000;}
+        .sepBorder					  { border-bottom:1px solid #FF0000; }
+        
+        /*.header						  { width:320px !important; margin-left:-10px !important; }*/
+        .largeHeader                  { display:none !important; }
+
+        .header						  { width:100% !important;left:0px; margin-left:0px !important; float:left; position:fixed; z-index:500;}
+
+        .navBar                       { width:100% !important;left:0px; margin-left:0px !important; height:45px;background-color:#3F3F3F;float:left; }
+
+        .navLogo                      { float:left; margin:5px 0 0 5px; border:0; display:block; }
+
+        #headerText:after             { content: "E-Zero"; }
+
+        .chooseState                  { float:left; margin-top:50px !important; }
+
+        .listPage                     { margin-top:46px !important; }
+
+        .mapPage                      { position:absolute; top:46px;left:0; z-index:200; background-color:#ffffff; }
+
+        .messagePage                  { text-align:center; float:left;position:absolute; padding-top:50px; top:46px;left:0; z-index:250; background-color:White; min-height:480px; }
+
+        .nonetPage                    { text-align:center; float:left;position:absolute; padding-top:50px; top:46px;left:0; z-index:150; background-color:White; min-height:480px; }
+
+        .stateChooser                 { position:absolute; top:46px;left:0; z-index:200; background-color:#ffffff; padding:5px; min-height:422px; }
+
+        .alphaChooser                 { position:absolute; top:46px;left:0; z-index:200; background-color:#ffffff; padding:5px; min-height:422px; }
+
+        
+        .darkButton
+        {
+	        color:#fff !important;
+	        background-color:#ff0000 !important;
+	        border:0px !important;
+	        padding:2px !important;
+	        min-height:10px !important;
+	        cursor:pointer !important;
+            }
+ 	
+ }
+
+@media only screen and (min-width: 480px) and (max-width: 767px) 
+{
+        .adBox                        { display:block; }
+        .mainColor					  { background-color: #FF0000; }
+        .reverseBox                   { border:2px solid #FF0000; font-weight:bold;color:#FF0000;background-color:transparent;}
+        .solidBox                     { border:2px solid #fff; font-weight:bold;color:#fff;background-color:#FF0000;}
+        .sepBorder					  { border-bottom:1px solid #FF0000; }
+        
+        .largeHeader                  { display:none !important; }
+
+        .header						  { width:100% !important;left:0px; margin-left:0px !important; float:left; position:fixed;z-index:500; }
+
+        .navBar                       { width:100% !important;left:0px; margin-left:0px !important; height:45px;background-color:#3F3F3F;float:left; }
+
+        .navLogo                      { float:left; margin:5px 0 0 5px; border:0; display:block; }
+
+        #headerText:before             { content: "E-Zero"; }
+
+        .chooseState                  { float:left; margin-top:50px !important; }
+
+        .listPage                     { margin-top:46px !important; }
+
+        .mapPage                      { position:absolute; top:46px;left:0; z-index:200; background-color:#ffffff; }
+
+        .messagePage                  { text-align:center; float:left;position:absolute; padding-top:50px; top:46px;left:0; z-index:250; background-color:White; min-height:480px; }
+
+        .nonetPage                    { text-align:center; float:left;position:absolute; padding-top:50px; top:46px;left:0; z-index:150; background-color:White; min-height:480px; }
+
+        .stateChooser                 { position:absolute; top:46px;left:0; z-index:200; background-color:#ffffff; padding:5px; min-height:422px; }
+
+        .alphaChooser                 { position:absolute; top:46px;left:0; z-index:200; background-color:#ffffff; padding:5px; min-height:422px; }
+
+        
+        .darkButton
+        {
+	        color:#fff !important;
+	        background-color:#ff0000 !important;
+	        border:0px !important;
+	        padding:2px !important;
+	        min-height:10px !important;
+	        cursor:pointer !important;
+            }
+}

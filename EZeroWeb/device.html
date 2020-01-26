@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>E-Zero - Ethanol-free gas stations</title>
+	<meta name="description" content=""/>
+	<meta name="author" content=""/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css"/>
+	<link rel="stylesheet" href="stylesheets/skeleton.css"/>
+	<link rel="stylesheet" href="stylesheets/layout.css"/>
+    <link rel="stylesheet" href="stylesheets/master.css"/>
+
+    <!-- JS
+	================================================== -->
+	<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+    <script type="text/javascript" src="scripts/phonegap-1.4.1.js"></script>
+    <script type="text/javascript" src="scripts/sharedfunctions.js"></script>
+    <script type="text/javascript" src="scripts/devicefunctions.js"></script>
+    <script type="text/javascript" src="scripts/tabs.js"></script>
+    <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+
+	<div class="container">
+		<div class="sixteen columns content header" type="header" style="height:45px;background-color:#3F3F3F;">
+			<img id="navLogo" style="float:left; margin:5px 0 0 5px; border:0" src="images/mrt_32_white.png" alt="Techalio logo"/>
+            <div id="headerText" style="margin:10px 0 0 10px; font-size:14pt; color:#fff;float:left">E-Zero</div>
+            <div id="listText" style="margin:13px 0 0 10px; font-size:12pt; color:#fff;float:left;display:none;">
+                <span style="float:left">Stations in&nbsp;</span><span style="float:left" id="stateText"></span>
+                <div style="float:right;margin-top:-3px; margin-left:20px;">
+                   <input id="btnState" class="ezButton" style="width:100px; padding:5px;" onclick="stateChooser()" type="button" value="Change state" />
+                   <input id="btnMap" class="ezButton" style="display:none; width:120px; padding:5px;" onclick="backScript.pop();closeMapPage();" type="button" value="Back to list" />
+                </div>
+            </div>
+		</div>
+       
+		<div class="eight columns" style="float:left; display:none; margin-top:20px;" id="chooseState">
+			<h2>Welcome to E-Zero</h2>
+			<p>Here you can find stations in the U.S. and Canada that sell ethanol-free gasoline. To begin, choose your state or province.</p><p><input class="ezButton" onclick="getPosition()" type="button" value="Try and locate my state or province" /><br /><input class="ezButton" onclick="stateChooser()" type="button" value="Choose a state or province" /></p>
+        </div>
+
+        <div type="page" class="sixteen columns" style="display:none;" id="listPage">
+            <div id="pageContent"></div>
+        </div>
+
+        <div type="page" class="sixteen columns" style="position:absolute; top:46px;left:0; z-index:200; background-color:#ffffff;display:none;" id="mapPage">
+            <div style="position:relative; margin-top:10px; margin-bottom:5px">
+                <div id="mName" style="font-weight:bold"></div>
+                <div id="mAddress"></div>
+                <div id="mMapLink"></div>
+            </div>
+            <div id="zeroMap" style="position:relative; height:400px"></div>
+        </div>
+
+        <div id="dataStore" style="display:none"></div>
+
+        <div type="page" id="messagePage" class="sixteen columns" style="text-align:center; float:left;position:absolute; padding-top:50px; top:46px;left:0; z-index:250; background-color:White; min-height:480px; display:none">
+            <div id="mSpan" style="max-width:500px; margin:0 auto; color:#3f3f3f; font-size:12pt">E-Zero</div>
+        </div>
+
+        <div type="page" id="nonetPage" class="sixteen columns" style="text-align:center; float:left;position:absolute; padding-top:50px; top:46px;left:0; z-index:150; background-color:White; min-height:480px; display:none">
+            <div style="max-width:500px; margin:0 auto; color:#000; font-size:12pt">We're sorry, but E-Zero is unable to connect to the internet for some reason. It's not your fault. <br /> <br /> E-Zero requires a network connection to get station data. Perhaps you are outside your cellphone coverage area or you have airplane mode turned on. If everything looks ok, just try again. <br /><br /><input class="ezButton" style="min-width:100px;" onclick="tryAgain()" type="button" value="Ok" /></div>
+        
+        </div>
+
+        <div id="stateChooser" type="page" class="sixteen columns" style="position:absolute; top:46px;left:0; z-index:200; background-color:#ffffff; padding:5px; min-height:422px; display:none"></div>
+
+        <div id="alphaChooser" type="page" class="sixteen columns" style="position:absolute; top:46px;left:0; z-index:200; background-color:#ffffff; padding:5px; min-height:422px; display:none"></div>
+
+        <!--<div id="adBox" style="float:left;">
+        <script type="text/javascript">
+          window.googleAfmcRequest = {
+            client: 'ca-mb-pub-6589940799022935',
+            format: '320x50_mb',
+            output: 'HTML',
+            slotname: '9340074610',
+          };
+        </script>
+        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_afmc_ads.js"></script>
+        </div>-->
+
+
+	</div><!-- container -->
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
